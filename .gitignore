@@ -1,0 +1,28 @@
+# Vivado simulation
+*.log
+*.jou
+*.pb
+*.wdb
+*.wcfg
+*.vcd
+*.dir
+
+# xsim build output
+xsim.dir/
+xelab.*
+xsim.*
+
+# Vivado local database
+.Xil/
+
+# Vivado pid
+*.str
+
+# OS/editor junk
+*~
+*.swp
+.DS_Store
+
+
+# Text files
+*.txt

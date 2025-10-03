@@ -1,4 +1,4 @@
-# APB Design & Verification
+# APB Memory
 
 ## Overview
 This project implements and verifies an **AMBA APB (Advanced Peripheral Bus) slave interface** with a 64 KB memory space. The design follows the standard APB protocol with IDLE, SETUP, and ACCESS phases, and has been verified using a SystemVerilog testbench with functional coverage, assertions, and directed/random tests.
@@ -22,10 +22,14 @@ This project implements and verifies an **AMBA APB (Advanced Peripheral Bus) sla
 ---
 
 ## Microarchitecture
+![Microarchitecture](img/uArch.png)
+
 The slave design is implemented using a **Mealy FSM** with the following states:
 - **IDLE**
 - **SETUP**
 - **ACCESS**
+
+![Microarchitecture](img/fsm.png)
 
 Key signals:
 - `PSELx`, `PENABLE`, `PWRITE`, `PREADY`, `PSLVERR`
@@ -49,6 +53,8 @@ Key signals:
 ---
 
 ## Verification Environment
+![Microarchitecture](img/TB%20arch.png)
+
 The testbench is built in **SystemVerilog UVM-like structure** with the following components:
 - **apb_driver** – Drives transactions onto DUT
 - **apb_monitor** – Captures bus activity
